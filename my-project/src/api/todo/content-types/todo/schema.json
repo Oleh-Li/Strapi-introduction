@@ -4,7 +4,8 @@
   "info": {
     "singularName": "todo",
     "pluralName": "todos",
-    "displayName": "Todo"
+    "displayName": "Todo",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -26,12 +27,12 @@
         "critical"
       ],
       "default": "regular",
-      "required": true
+      "required": false
     },
     "done": {
       "type": "boolean",
       "default": false,
-      "required": true
+      "required": false
     },
     "user": {
       "type": "relation",
