@@ -1,37 +1,7 @@
 // @ts-nocheck
 'use strict';
 
-/**
- * todo controller
- */
-
 const { createCoreController } = require('@strapi/strapi').factories;
-
-// module.exports = createCoreController('api::todo.todo');
-
-// module.exports = createCoreController(
-//     "api::todo.todo",
-//     ({ strapi }) => ({
-//         async create(ctx) {
-//             const { id } = ctx.state.user;
-
-//             // Додаємо user до даних перед збереженням
-//             ctx.request.body.data.user = id;
-
-//             const response = await super.create(ctx);
-
-//             // Додаємо user до відповіді API
-//             response.data.attributes.user = {
-//                 id: id,
-//                 email: ctx.state.user.email, // або інші поля, які потрібно включити
-//             };
-
-
-
-//             return response;
-//         },
-//     })
-// );
 
 module.exports = createCoreController(
     "api::todo.todo",

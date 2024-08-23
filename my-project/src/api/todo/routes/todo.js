@@ -1,8 +1,5 @@
 'use strict';
 
-/**
- * todo router
- */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
