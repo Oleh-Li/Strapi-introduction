@@ -23,8 +23,15 @@ module.exports = createCoreController(
                 const user = await strapi
                     .query("plugin::users-permissions.user")
                     .findOne({ where: { id: id } });
-
-                sanitizedEntity.user = user;
+                console.log("USER==>", user)
+                sanitizedEntity.user = {
+                    data: {
+                        id: user.id,
+                        attributes: {
+                            userName: user.username, // або інше ім'я поля, яке потрібно додати
+                        }
+                    }
+                };
 
                 return this.transformResponse(sanitizedEntity);
             } catch (error) {
